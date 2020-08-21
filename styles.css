@@ -1,0 +1,209 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Arial Narrow Bold", sans-serif;
+}
+.hotelImage {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: 20rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  min-width: 50rem;
+  min-height: 4rem;
+  background: #04d4b4;
+  padding: 3rem;
+  color: white;
+}
+
+.hotel-container {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 20rem;
+  width: 20rem;
+  border-radius: 4px;
+  box-shadow: 0px 5px 8px 1px gray;
+}
+.hotelList {
+  display: flex;
+  flex-flow: row wrap;
+  min-height: 12rem;
+  min-width: 10rem;
+  margin: 0 6rem;
+  justify-content: space-around;
+}
+.dataContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.titleAll {
+  font-weight: bold;
+  font-size: 40px;
+}
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.buttonBooking {
+  background-color: #04d4b4;
+  width: 100%;
+  height: 3rem;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0em;
+}
+.infoPlace{
+  display: flex;
+  flex-direction: row;
+  margin:0.5rem 0.5rem 1.5rem 0.1rem;
+}
+.infoCity{
+  display: flex;
+  flex-direction: row;
+  padding:0.6rem;
+}
+.rooms{
+  display: flex;
+  flex-direction: row;
+}
+.infoContainer{
+  display: flex;
+  flex-direction: row;
+  padding-left: 0rem;
+}
+.placeContainer{
+  display: flex;
+  flex-direction: row;
+  background-color: #27a5e6;
+  border-radius: 4px 0px 0px 4px;
+  color: white;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0rem 0rem 0rem 0.3rem;
+}
+.roomsContainer{
+  display: flex;
+  flex-direction: rom;
+  background-color: #27a5e6;
+  border-radius: 4px 0px 0px 4px;
+  color: white;
+  align-items: center;
+  width: 2.5rem;
+  padding: 0rem 0rem 0rem 0.3rem;
+}
+.cityContainer{
+  display: flex;
+  flex-direction: rom;
+  background-color:gainsboro;
+  border-radius: 0px 4px 4px 0px;
+  align-items: center;
+  width: 100%;
+  height: 2rem;
+  padding: 0rem 0rem 0rem 0.3rem;
+}
+.rooms{
+  display: flex;
+  flex-direction: rom;
+  background-color:gainsboro;
+  border-radius: 0px 4px 4px 0px;
+  align-items: center;
+  width: 100%;
+  height: 2rem;
+  padding: 0rem 0rem 0rem 0.3rem;
+}
+
+.priceContainer{
+  display: flex;
+  flex-direction: row;
+  background-color: #27a5e6;
+  border-radius: 4px 4px 4px 4px;
+  color: white;
+  width: 4rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin:0.5rem 0.5rem 0.5rem 0.1rem;
+  padding: 0rem 0rem 0rem 0.3rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.filter {
+  min-width: 20rem;
+  height: 3rem;
+  background: #27a5e6;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.prices,.size,.country{
+  justify-content: center;
+  width: 8.2rem;
+  height: 2rem;
+  border-radius: 4px 4px 4px 4px;
+}
+.Fechainicial, .Fechafinal{
+  justify-content: center;
+  width: 8.2rem;
+  height: 1.5rem;
+  border-radius: 4px 4px 4px 4px;
+}
+
