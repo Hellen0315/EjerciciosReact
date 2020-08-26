@@ -1,7 +1,7 @@
 class App extends React.Component {
   state = {
     dataHoteles: hotelsData,
-    filters: {
+    filters :{
       initialDate: moment(),
       finalDate: moment(),
       priceFilter: "Todos",
