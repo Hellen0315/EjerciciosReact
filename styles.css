@@ -41,12 +41,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Arial Narrow Bold", sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 .hotelImage {
   display: flex;
@@ -54,16 +52,20 @@ body {
   width: 20rem;
   height: 20rem;
 }
-
 .header {
   display: flex;
   flex-direction: column;
-  min-width: 50rem;
+  width: 100%;
   min-height: 4rem;
-  background: #04d4b4;
-  padding: 3rem;
+  background-color: #0c7258;
+  padding: 2rem;
   color: white;
-}
+  align-items: center;
+} 
+.titleAll {
+  font-weight: bold;
+  font-size: 40px;
+} 
 
 .hotel-container {
   margin: 1rem;
@@ -89,10 +91,9 @@ body {
   height: 100%;
   justify-content: space-between;
 }
-
-.titleAll {
+.title {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 20px;
 }
 .textContainer {
   display: flex;
@@ -100,7 +101,7 @@ body {
   padding: 1rem;
 }
 .buttonBooking {
-  background-color: #04d4b4;
+  background-color: #0c7258;
   width: 100%;
   height: 3rem;
   color: white;
@@ -131,7 +132,7 @@ body {
 .placeContainer{
   display: flex;
   flex-direction: row;
-  background-color: #27a5e6;
+  background-color: #0c7258;
   border-radius: 4px 0px 0px 4px;
   color: white;
   align-items: center;
@@ -142,7 +143,7 @@ body {
 .roomsContainer{
   display: flex;
   flex-direction: rom;
-  background-color: #27a5e6;
+  background-color: #0c7258;
   border-radius: 4px 0px 0px 4px;
   color: white;
   align-items: center;
@@ -173,7 +174,7 @@ body {
 .priceContainer{
   display: flex;
   flex-direction: row;
-  background-color: #27a5e6;
+  background-color: #0c7258;
   border-radius: 4px 4px 4px 4px;
   color: white;
   width: 4rem;
@@ -187,7 +188,7 @@ body {
 .filter {
   min-width: 20rem;
   height: 3rem;
-  background: #27a5e6;
+  background: ;
   color: white;
   display: flex;
   justify-content: center;

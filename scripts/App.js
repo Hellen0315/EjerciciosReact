@@ -9,7 +9,7 @@ class App extends React.Component {
       sizeFilter: "Todos"
     }
   }
-  
+
   handleonChage = (e) => {
     e.persist()
     this.setState({
@@ -21,9 +21,9 @@ class App extends React.Component {
   };
 
   filtroHotels = () => {
-    const {priceFilter, countryFilter, sizeFilter} = this.state.filters;
+    const {priceFilter, countryFilter, sizeFilter, initialDate,finalDate} = this.state.filters;
     let hoteles = this.state.dataHoteles;
-
+   
     if (priceFilter !=="Todos"){
       hoteles = hoteles.filter((hotel) => hotel.price == priceFilter);
     }
