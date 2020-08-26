@@ -17,17 +17,24 @@ class App extends React.Component {
         [e.target.name]: e.target.value
       }
     })
+    
+    this.filtroCountry(this.state.filters.countryFilter)
   };
 
-  filtroCountry = (data) => () => {
+  filtroCountry = (data) =>  {
+    if (this.state.countryFilter != "Todos"){
     const dataA = this.state.dataHoteles;
-    dataA.filter(datos => datos.country === data)
+    const dataC= dataA.filter(datos => datos.country === data)
+    
+    console.log(dataC, data);
+
     this.setState({
-      dataHoteles:dataA
+      dataHoteles:dataC
     });
+  }
   };
 
-  filtroPrices = (data) => () => {
+  filtroPrices = (data) => {
     const dataA = this.state.dataHoteles;
     dataA.filter(datos => datos.price === data)
     this.setState({
@@ -51,18 +58,11 @@ class App extends React.Component {
     });
   };
   render() {
-    const {priceFilter,  countryFilter, sizeFilter} = this.state.filters
-     if (countryFilter != "Todos"){
-        this.filtroCountry(countryFilter);
-     }
-     if (priceFilter != "Todos"){
-       this.filtroPrices(priceFilter);
-     }
-     if (sizeFilter != "Todos"){
-       this.filtroSize(sizeFilter);
-     }
-     console.log(this.state.dataHoteles);
-     console.log(priceFilter);
+
+    console.log(this.state.filters.countryFilter);
+    console.log(this.state.filters.priceFilter);
+    console.log(this.state.filters.sizeFilter);
+
     return (
       <div className="App">
         <Header initialDate={this.state.filters.initialDate}  finalDate={this.state.filters.finalDate}/>
