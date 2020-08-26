@@ -9,6 +9,7 @@ class App extends React.Component {
       sizeFilter: "Todos"
     }
   }
+  
   handleonChage = (e) => {
     e.persist()
     this.setState({
@@ -44,7 +45,7 @@ class App extends React.Component {
   render (){
     return (
       <div className="App">
-        <Headers  initialDate={this.state.filters.initialDate} finalDate={this.state.filters.finalDate}/>
+        <Header initialDate={this.state.filters.initialDate} finalDate={this.state.filters.finalDate}/>
         <Filter data={this.state.dataHoteles} {...this.state.filters} onChange={this.handleonChage} />
         <HotelContainer  data = {this.filtroHotels()} />
       </div>

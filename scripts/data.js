@@ -71,6 +71,7 @@ const hotelsData = [
     description: 'La exclusividad rodeada de historia. Azur Real Hotel Boutique está ubicado en el corazón de la zona comercial y el centro histórico de Córdoba, dentro de uno de los principales circuitos culturales y turísticos de la ciudad.',
     availabilityFrom: today.add(15, 'days'), // 15 days 
     availabilityTo: today.add(30, 'days'),
+    rooms: 16,
     city: 'Córdoba',
     country: 'Argentina',
     price: 1
