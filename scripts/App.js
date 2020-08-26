@@ -28,8 +28,14 @@ class App extends React.Component {
     if (priceFilter !== "Todos") {
       hotels = hotels.filter((hotel) => hotel.price == priceFilter);
     }
-    if (sizeFilter !== "Todos") {
-      // hotels = hotels.filter((hotel) => hotel.country === countryFilter);
+    if (sizeFilter  == "pequeño") {
+      hotels = hotels.filter(room => room.rooms <= 10);
+    }
+    if (sizeFilter  == "mediano") {
+      hotels = hotels.filter(room => room.rooms > 10 && room.rooms <= 20);
+    }
+    if (sizeFilter  == "grande") {
+      hotels = hotels.filter(room => room.rooms > 20);
     }
     return hotels
   }
@@ -58,15 +64,7 @@ class App extends React.Component {
 
   filtroSize = (data) => () => {
     const dataA = this.state.dataHoteles;
-    if (data == "pequeño") {
-      dataA.filter(room => room.rooms <= 10);
-    }
-    if (data == "mediano") {
-      dataA.filter(room => room.rooms > 10 && room.rooms <= 20);
-    }
-    if (data == "grande") {
-      dataA.filter(room => room.rooms > 20);
-    }
+   
     this.setState({
       dataHoteles: dataA
     });
