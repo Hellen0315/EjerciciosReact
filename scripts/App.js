@@ -17,8 +17,6 @@ class App extends React.Component {
         [e.target.name]: e.target.value
       }
     })
-
-    this.filtroCountry(this.state.filters.countryFilter)
   };
 
   filterHotels = () => {
