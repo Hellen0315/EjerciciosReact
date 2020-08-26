@@ -17,54 +17,36 @@ class App extends React.Component {
         [e.target.name]: e.target.value
       }
     })
-
-    // this.filtroCountry(this.state.filters.countryFilter)
   };
 
-  filtroCountry = (data) =>  {
-    if (this.state.countryFilter != "Todos"){
-    const dataA = this.state.dataHoteles;
-    const dataC= dataA.filter(datos => datos.country === data)
-    this.setState({
-      dataHoteles:dataC
-    });
-   }
-  };
+  filtroHotels = () =>{
+    const {priceFilter,countryFilter,sizeFilter} = this.state.filters;
+    let hotelD = this.state.dataHoteles;
 
-  filtroPrices = (data) => {
-    const dataA = this.state.dataHoteles;
-    dataA.filter(datos => datos.price === data)
-    this.setState({
-      dataHoteles: dataA
-    });
-  };
-
-  filtroSize = (data) => () => {
-    const dataA = this.state.dataHoteles;
-    if (data == "pequeño"){
-      dataA.filter(room => room.rooms <= 10);
-     } 
-    if (data == "mediano"){
-      dataA.filter(room => room.rooms > 10 && room.rooms <= 20);
+    if (priceFilter !== "Todos"){
+       hotelD= hotelD.filter(datos => datos.price === priceFilter);
     }
-    if (data == "grande"){
-      dataA.filter(room => room.rooms > 20); 
+    if (countryFilter !== "Todos"){
+      hotelD= hotelD.filter(datos => datos.country === countryFilter);
+    }
+    if (sizeFilter == "pequeño"){
+      hotelD = hotelD.filter(room => room.rooms <= 10);
+     } 
+    if (sizeFilter == "mediano"){
+      hotelD = hotelD.filter(room => room.rooms > 10 && room.rooms <= 20);
+    }
+    if (sizeFilter == "grande"){
+      hotelD = hotelD.filter(room => room.rooms > 20); 
     }   
-    this.setState({
-      dataHoteles: dataA
-    });
-  };
-  render() {
-
-    console.log(this.state.filters.countryFilter);
-    // console.log(this.state.filters.priceFilter);
-    // console.log(this.state.filters.sizeFilter);
-
+    return hotelD;
+  }
+  
+   render() {
     return (
       <div className="App">
         <Header initialDate={this.state.filters.initialDate}  finalDate={this.state.filters.finalDate}/>
         <Filter data={this.state.dataHoteles} {...this.state.filters} onChange={this.handleonChage} />
-        <HotelContainer data={this.state.dataHoteles}/>
+        <HotelContainer data={this.state.dataHoteles} filter={this.filtroHotels()}/>
       </div>
     );
   }
