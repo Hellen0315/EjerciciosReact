@@ -17,21 +17,18 @@ class App extends React.Component {
         [e.target.name]: e.target.value
       }
     })
-    
-    this.filtroCountry(this.state.filters.countryFilter)
+
+    // this.filtroCountry(this.state.filters.countryFilter)
   };
 
   filtroCountry = (data) =>  {
     if (this.state.countryFilter != "Todos"){
     const dataA = this.state.dataHoteles;
     const dataC= dataA.filter(datos => datos.country === data)
-    
-    console.log(dataC, data);
-
     this.setState({
       dataHoteles:dataC
     });
-  }
+   }
   };
 
   filtroPrices = (data) => {
@@ -60,8 +57,8 @@ class App extends React.Component {
   render() {
 
     console.log(this.state.filters.countryFilter);
-    console.log(this.state.filters.priceFilter);
-    console.log(this.state.filters.sizeFilter);
+    // console.log(this.state.filters.priceFilter);
+    // console.log(this.state.filters.sizeFilter);
 
     return (
       <div className="App">
