@@ -7,7 +7,8 @@ class App extends React.Component {
       priceFilter: "Todos",
       countryFilter: "Todos",
       sizeFilter: "Todos"
-    }
+    },
+    vacio:false
   }
 
   handleonChage = (e) => {
@@ -19,7 +20,7 @@ class App extends React.Component {
       }
     })
   };
-
+  
   filtroHotels = () => {
     const {priceFilter, countryFilter, sizeFilter, initialDate,finalDate} = this.state.filters;
     let hoteles = this.state.dataHoteles;
@@ -39,15 +40,21 @@ class App extends React.Component {
     if (sizeFilter == "grande"){
       hoteles = hoteles.filter(room => room.rooms > 20);
     }
+    if (Object.entries(hoteles).length === 0){
+      this.setState({
+        vacio: true
+      });
+    }
     return hoteles
   }
 
   render (){
+    console.log(this.state.vacio);
     return (
       <div className="App">
         <Header initialDate={this.state.filters.initialDate} finalDate={this.state.filters.finalDate}/>
         <Filter data={this.state.dataHoteles} {...this.state.filters} onChange={this.handleonChage} />
-        <HotelContainer  data = {this.filtroHotels()} />
+        <HotelContainer  data = {this.filtroHotels()} estado= {this.vacio} />
       </div>
     );
   }
