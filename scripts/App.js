@@ -3,7 +3,7 @@ class App extends React.Component {
     dataHoteles: hotelsData,
     filters :{
       initialDate: moment(),
-      finalDate: moment(),
+      finalDate: moment().add(7,"day"),
       priceFilter: "Todos",
       countryFilter: "Todos",
       sizeFilter: "Todos"
@@ -24,7 +24,9 @@ class App extends React.Component {
   filtroHotels = () => {
     const {priceFilter, countryFilter, sizeFilter, initialDate,finalDate} = this.state.filters;
     let hoteles = this.state.dataHoteles;
-   
+    if (priceFilter !=="Todos"){
+      hoteles = hoteles.filter((hotel) => hotel.price == priceFilter);
+    }
     if (priceFilter !=="Todos"){
       hoteles = hoteles.filter((hotel) => hotel.price == priceFilter);
     }
@@ -40,11 +42,7 @@ class App extends React.Component {
     if (sizeFilter == "grande"){
       hoteles = hoteles.filter(room => room.rooms > 20);
     }
-    if (Object.entries(hoteles).length === 0){
-      this.setState({
-        vacio: true
-      });
-    }
+   
     return hoteles
   }
 
