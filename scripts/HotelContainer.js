@@ -1,4 +1,4 @@
-const img = './images/hotelsoon';
+const img = './images/hotelsoon.jpg';
 class HotelContainer extends React.Component {
   render() {
     const {data} = this.props;
