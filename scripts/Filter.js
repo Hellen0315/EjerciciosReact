@@ -15,17 +15,17 @@ class Filter extends React.Component {
 
     return (
       <nav className="filter">
-        <input className="Fechainicial"
+        <input className="initialDate"
           type="date"
           name="initialDate"
           onChange={onChange}
           values={initialDate}>
         </input>
-        <input className="Fechafinal"
+        <input className="finalDate"
           type="date"
           name="finalDate"
           onChange={onChange}
-          values={finalDate}>
+          value={finalDate}>
         </input>
 
         <select

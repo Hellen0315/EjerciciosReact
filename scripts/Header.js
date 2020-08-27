@@ -4,8 +4,10 @@ class Header extends React.Component{
     const { initialDate, finalDate } = this.props
     return(
       <div className="header">
-        <h1 className="titleAll">Hoteles</h1>
-        <p>
+        <div className="oval-half-red">
+          <h1 className="titleAll">Hoteles</h1>
+        </div>
+        <p className="date">
           {`Desde el ${moment(initialDate).format('dddd')}, ${moment(initialDate).format('D')} de ${moment(initialDate).format('MMMM')} de ${moment(initialDate).format('YYYY')} 
           hasta el ${moment(finalDate).format('dddd')}, ${moment(finalDate).format('D')} de ${moment(finalDate).format('MMMM')} de ${moment(finalDate).format('YYYY')}` }
         </p>

@@ -7,8 +7,7 @@ class App extends React.Component {
       priceFilter: "Todos",
       countryFilter: "Todos",
       sizeFilter: "Todos"
-    },
-    vacio:false
+    }
   }
 
   handleonChage = (e) => {
@@ -42,17 +41,15 @@ class App extends React.Component {
     if (sizeFilter == "grande"){
       hoteles = hoteles.filter(room => room.rooms > 20);
     }
-   
     return hoteles
   }
 
   render (){
-    console.log(this.state.vacio);
     return (
       <div className="App">
         <Header initialDate={this.state.filters.initialDate} finalDate={this.state.filters.finalDate}/>
         <Filter data={this.state.dataHoteles} {...this.state.filters} onChange={this.handleonChage} />
-        <HotelContainer  data = {this.filtroHotels()} estado= {this.vacio} />
+        <HotelContainer  data = {this.filtroHotels()} />
       </div>
     );
   }

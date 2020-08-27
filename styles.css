@@ -37,6 +37,17 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
+.soon{
+width: 50%;
+}
+.oval-half-red {
+  width: 15rem;
+  height: 7rem;
+  -moz-border-radius: 0 50% / 0 100%;
+  -webkit-border-radius: 0 50% / 0 100%;
+  border-radius: 0 50% / 0 100%;
+  background:#1d315a ;
+}
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -57,14 +68,18 @@ body {
   flex-direction: column;
   width: 100%;
   min-height: 4rem;
-  background-color: #0c7258;
+  background-color: #fccd85;
   padding: 2rem;
   color: white;
   align-items: center;
-} 
-.titleAll {
   font-weight: bold;
+} 
+.date{
+  color: #1d315a;
+}
+.titleAll {
   font-size: 40px;
+  padding: 0.5rem 3rem;
 } 
 
 .hotel-container {
@@ -101,7 +116,7 @@ body {
   padding: 1rem;
 }
 .buttonBooking {
-  background-color: #0c7258;
+  background-color: #f35d06;
   width: 100%;
   height: 3rem;
   color: white;
@@ -132,9 +147,9 @@ body {
 .placeContainer{
   display: flex;
   flex-direction: row;
-  background-color: #0c7258;
+  background-color: #fba130;
   border-radius: 4px 0px 0px 4px;
-  color: white;
+  color: #1d315a ;
   align-items: center;
   width: 2rem;
   height: 2rem;
@@ -143,9 +158,9 @@ body {
 .roomsContainer{
   display: flex;
   flex-direction: rom;
-  background-color: #0c7258;
+  background-color: #fba130;
   border-radius: 4px 0px 0px 4px;
-  color: white;
+  color: #1d315a ;
   align-items: center;
   width: 2.5rem;
   padding: 0rem 0rem 0rem 0.3rem;
@@ -153,7 +168,7 @@ body {
 .cityContainer{
   display: flex;
   flex-direction: rom;
-  background-color:gainsboro;
+  background-color:#fbe0cd;
   border-radius: 0px 4px 4px 0px;
   align-items: center;
   width: 100%;
@@ -163,7 +178,7 @@ body {
 .rooms{
   display: flex;
   flex-direction: rom;
-  background-color:gainsboro;
+  background-color:#fbe0cd;
   border-radius: 0px 4px 4px 0px;
   align-items: center;
   width: 100%;
@@ -174,9 +189,9 @@ body {
 .priceContainer{
   display: flex;
   flex-direction: row;
-  background-color: #0c7258;
+  background-color: #fba130;
   border-radius: 4px 4px 4px 4px;
-  color: white;
+  color: #1d315a ;
   width: 4rem;
   height: 2rem;
   align-items: center;
@@ -186,25 +201,36 @@ body {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .filter {
-  min-width: 20rem;
-  height: 3rem;
-  background: ;
-  color: white;
+  width: 100%;
+  height: 3.2rem;
+  background: #f35d06;
   display: flex;
   justify-content: center;
   align-items: center;
  
 }
-.prices,.size,.country{
+
+.prices,.size,.country,.initialDate, .finalDate{
+  margin: 0.3rem;
+  font-weight: bold;
+  border-bottom: 2px solid #f35d06;
+  color: #1d315a;
+  cursor: pointer;
   justify-content: center;
-  width: 8.2rem;
+  width: 9rem;
   height: 2rem;
   border-radius: 4px 4px 4px 4px;
+  transition: color 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease;
+
 }
-.Fechainicial, .Fechafinal{
-  justify-content: center;
-  width: 8.2rem;
-  height: 1.5rem;
-  border-radius: 4px 4px 4px 4px;
+select::-ms-expand {
+  display: none; 
 }
+select:hover,
+select:focus {
+  color: #f35d06;
+  background-color: white;
+  border-bottom-color: white;
+}
+
 
