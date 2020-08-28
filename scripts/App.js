@@ -3,7 +3,7 @@ class App extends React.Component {
     dataHoteles: hotelsData,
     filters :{
       initialDate: moment(),
-      finalDate: moment().add(7,"day"),
+      finalDate: moment().add(1,'day'),
       priceFilter: "Todos",
       countryFilter: "Todos",
       sizeFilter: "Todos"
@@ -41,6 +41,12 @@ class App extends React.Component {
     if (sizeFilter == "grande"){
       hoteles = hoteles.filter(room => room.rooms > 20);
     }
+    if(finalDate != null){
+      hoteles = hoteles.filter(date => moment(date.availabilityTo).isSameOrBefore(finalDate, 'day'))
+    }
+    hoteles= hoteles.filter(dateF => moment(dateF.availabilityFrom).isSameOrAfter(initialDate), 'day');
+
+    
     return hoteles
   }
 
@@ -48,7 +54,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header initialDate={this.state.filters.initialDate} finalDate={this.state.filters.finalDate}/>
-        <Filter data={this.state.dataHoteles} {...this.state.filters} onChange={this.handleonChage} />
+        <Filter data={this.state.dataHoteles} {...this.state.filters} onChange={this.handleonChage}  />
         <HotelContainer  data = {this.filtroHotels()} />
       </div>
     );

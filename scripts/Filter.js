@@ -5,7 +5,8 @@ class Filter extends React.Component {
     const unique = (value, index, self) => {
       return self.indexOf(value) === index
     }
-
+    const dateI = moment(initialDate).format('YYYY-MM-DD')
+    const dateF = moment(finalDate).format('YYYY-MM-DD')
     const countryList = this.props.data.map(country => country.country)
     const uniqueCountry = countryList.filter(unique)
     const pricesList = this.props.data.map(prices => prices.price)
@@ -19,13 +20,13 @@ class Filter extends React.Component {
           type="date"
           name="initialDate"
           onChange={onChange}
-          values={initialDate}>
+          values={dateI}>
         </input>
         <input className="finalDate"
           type="date"
           name="finalDate"
           onChange={onChange}
-          value={finalDate}>
+          value={dateF}>
         </input>
 
         <select
