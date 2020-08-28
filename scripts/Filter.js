@@ -20,11 +20,13 @@ class Filter extends React.Component {
           type="date"
           name="initialDate"
           onChange={onChange}
+          min={dateI}
           values={dateI}>
         </input>
         <input className="finalDate"
           type="date"
           name="finalDate"
+          min={dateI}
           onChange={onChange}
           value={dateF}>
         </input>
