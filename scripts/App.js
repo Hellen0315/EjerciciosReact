@@ -41,11 +41,10 @@ class App extends React.Component {
     if (sizeFilter == "grande"){
       hoteles = hoteles.filter(room => room.rooms > 20);
     }
-    // if(finalDate != null){
-    //   hoteles = hoteles.filter(date => moment(date.availabilityTo).isSameOrBefore(finalDate, 'day'))
-    //   hoteles= hoteles.filter(dateF => moment(dateF.availabilityFrom).isSameOrAfter(initialDate), 'day');
-    // }
-     
+    if(finalDate != null){
+      hoteles= hoteles.filter(dateF => moment(dateF.availabilityTo).isSameOrAfter(finalDate,'day'));
+    }
+     hoteles = hoteles.filter(date => moment(date.availabilityFrom).isSameOrBefore(initialDate, 'day'));
     return hoteles
   }
 
