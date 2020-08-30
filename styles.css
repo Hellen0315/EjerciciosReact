@@ -39,9 +39,7 @@ q:before, q:after {
 }
 .soon{
 width: 80%;
-
 }
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -175,7 +173,6 @@ body {
   height: 2rem;
   padding: 0rem 0rem 0rem 0.3rem;
 }
-
 .priceContainer{
   display: flex;
   flex-direction: row;
@@ -199,7 +196,6 @@ body {
   align-items: center;
  
 }
-
 .prices,.size,.country,.initialDate, .finalDate{
   margin: 0.3rem;
   font-weight: bold;
@@ -222,5 +218,3 @@ select:focus {
   background-color: white;
   border-bottom-color: white;
 }
-
-
