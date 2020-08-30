@@ -3,7 +3,7 @@ class App extends React.Component {
     dataHoteles: hotelsData,
     filters :{
       initialDate: moment(),
-      finalDate: moment().add(1,'day'),
+      finalDate: moment(),
       priceFilter: "Todos",
       countryFilter: "Todos",
       sizeFilter: "Todos"

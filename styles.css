@@ -41,14 +41,7 @@ q:before, q:after {
 width: 80%;
 
 }
-.oval-half-red {
-  width: 15rem;
-  height: 7rem;
-  -moz-border-radius: 0 50% / 0 100%;
-  -webkit-border-radius: 0 50% / 0 100%;
-  border-radius: 0 50% / 0 100%;
-  background:#1d315a ;
-}
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -68,21 +61,17 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 4rem;
-  background-color: #fccd85;
-  padding: 2rem;
-  color: white;
+  height: 13rem;
   align-items: center;
+  background:
+  url(./images/banner2.jpg) #1d315a bottom center  no-repeat;
   font-weight: bold;
 } 
 .date{
-  color: #1d315a;
+  margin: 9rem;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  color:  white;
 }
-.titleAll {
-  font-size: 40px;
-  padding: 0.5rem 3rem;
-} 
-
 .hotel-container {
   margin: 1rem;
   display: flex;
